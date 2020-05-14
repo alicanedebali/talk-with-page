@@ -1,0 +1,14 @@
+{
+"name" : "Talk with Page",
+"version" : "1.0",
+"manifest_version" : 2,
+"permissions": ["tabs", "<all_urls>","notifications"],  
+"browser_action" : {
+                    "default_icon" : "waves_128.png"
+                   },
+"icons" : {
+          "16" : "waves_16.png",
+		  "128": "waves_128.png"
+		  },
+"background" : {"scripts" :["background.js"]}
+}
