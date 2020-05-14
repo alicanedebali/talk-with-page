@@ -3,7 +3,6 @@ SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
-//const colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', 'crimson', 'cyan', 'fuchsia', 'ghostwhite', 'gold', 'goldenrod', 'gray', 'green', 'indigo', 'ivory', 'khaki', 'lavender', 'lime', 'linen', 'magenta', 'maroon', 'moccasin', 'navy', 'olive', 'orange', 'orchid', 'peru', 'pink', 'plum', 'purple', 'red', 'salmon', 'sienna', 'silver', 'snow', 'tan', 'teal', 'thistle', 'tomato', 'turquoise', 'violet', 'white', 'yellow'];
 grammar = '#JSGF V1.0;'
 
 recognition = new SpeechRecognition();
@@ -73,10 +72,6 @@ alert("Söylediklerinizin karşılığı bulunmamakta. Lütfen tekrar söyleyini
 
 recognition.onspeechend = function() {
   recognition.stop();
-}
-
-recognition.onnomatch = function(event) {
-  console.log("I didn't recognise that color.");
 }
 
 recognition.onerror = function(event) {
