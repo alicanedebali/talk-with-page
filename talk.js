@@ -40,8 +40,11 @@ var alrt='';
 			alrt='next';
 			window.history.go(+1);}
 		else if(search.includes(key)){
+			var x= res.indexOf(key);
+			delete res[x]
+			var searchText=res.join(" ");
 			alrt='search';
-			window.open('http://google.com/search?q='+event.results[0][0].transcript);
+			window.open('http://google.com/search?q='+searchText);
 	}
 		else if(startRead.includes(key)){
 			alrt='startread';
