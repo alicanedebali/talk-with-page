@@ -47,6 +47,13 @@ var alrt='';
 	}
 		else if(startRead.includes(key)){
 			alrt='startread';
+			var userLang = '';
+			if(document.documentElement.lang){
+				userLang=document.documentElement.lang;
+			} else{
+				userLang=navigator.language || navigator.userLanguage;
+			}
+			console.log("Text lang: "+userLang);
 			var x = document.body.getElementsByTagName("*");
 			var message='';
 			var msg = window.speechSynthesis;
@@ -58,6 +65,7 @@ var alrt='';
 		
 		}
 		message=new SpeechSynthesisUtterance(message)
+		message.lang=userLang;
 		msg.speak(message);
 }else if(stopRead.includes(key)){
 	alrt='stopread';
